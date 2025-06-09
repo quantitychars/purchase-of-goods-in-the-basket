@@ -1,0 +1,118 @@
+.hero {
+  margin-top: 24px;
+
+  .swiper {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .slide {
+    position: relative;
+    display: flex;
+    color: #fff;
+    min-height: 420px;
+    padding: 60px 72px;
+    overflow: hidden; /* щоб не випирала */
+
+    &__img {
+      position: absolute;
+      right: 0;
+      bottom: 0; /* або top: 50%; transform: translateY(-50%) */
+      width: 100vw; /* половина екрана */
+      height: 100%;
+      object-fit: cover;
+      // object-position: right center; /* фокус на моделі */
+      pointer-events: none;
+    }
+    &__content {
+      max-width: 420px;
+      z-index: 1;
+    }
+
+    &__subtitle {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    &__title {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+    &__tag {
+      margin: 24px 0;
+      font-size: 18px;
+    }
+
+    .btn {
+      background: #fff;
+      color: #000;
+      border-radius: 8px;
+      padding: 14px 32px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+
+      &:hover {
+        background: #f2f2f2;
+      }
+    }
+  }
+
+  /* стрілки Swiper */
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #fff;
+    width: 48px;
+    height: 48px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    &:after {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+  /* пагінація-прогрес */
+  .swiper-pagination-bullet {
+    width: 32px;
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.4);
+    &-active {
+      background: #fff;
+    }
+  }
+}
+
+.slide__subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.slide__title {
+  font-size: 64px; /* такий самий як у макеті */
+  line-height: 1.1;
+  font-weight: 700;
+  margin: 0 0 24px;
+}
+
+.slide__tag {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 48px;
+}
+
+.btn {
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 16px 48px;
+  border-radius: 8px;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #f2f2f2;
+  }
+}

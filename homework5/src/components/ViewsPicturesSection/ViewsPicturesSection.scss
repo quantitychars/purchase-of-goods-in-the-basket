@@ -1,0 +1,42 @@
+.pictures {
+  margin-bottom: 64px;
+  margin-top: 64px;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .accent {
+      display: inline-block;
+      width: 4px;
+      height: 24px;
+      background: #9446ff; /* фіолетова лінія */
+      border-radius: 2px;
+      margin-right: 12px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 32px;
+  }
+}
+
+.pictures__grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px 12px 0 0;
+}
+
+/* адаптив — 2 колонки на телефоні */
+@media (max-width: 600px) {
+  .pictures__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
