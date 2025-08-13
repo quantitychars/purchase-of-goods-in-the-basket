@@ -1,0 +1,117 @@
+.header {
+  width: 100%;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+
+  &__container {
+    max-width: 1200px; /* ширина центру */
+    margin-inline: auto; /* центруємо */
+    height: 72px;
+    padding-inline: 32px;
+    column-gap: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  &__nav {
+    display: flex;
+    gap: 32px;
+  }
+
+  .nav__link {
+    color: #6c6c6c;
+    font-weight: 500;
+    cursor: pointer;
+
+    &--active,
+    &:hover {
+      color: #2b2b2b;
+    }
+  }
+  &__search {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    min-width: 280px;
+    padding-inline: 24px;
+    background: #f4f4f4;
+    border-radius: 12px;
+
+    &-icon {
+      flex-shrink: 0;
+      stroke: #8e8e8e;
+      margin-right: 16px;
+      width: 24px;
+      height: 24px;
+    }
+
+    &-input {
+      flex: 1;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 16px;
+      color: #2b2b2b;
+
+      &::placeholder {
+        color: #8e8e8e;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .icons {
+    display: flex;
+    gap: 16px;
+
+    .icon-btn {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      background: #f3f3f3;
+      border-radius: 8px;
+      cursor: pointer;
+
+      .badge {
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        background: #ff4d4d;
+        color: #fff;
+        font-size: 11px;
+        line-height: 16px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        text-align: center;
+      }
+    }
+  }
+}
+.logo__image {
+  height: 40px;
+  width: auto;
+}
+.link {
+  position: relative; // для бейджа
+  color: #bbb;
+  &.active {
+    color: #fff;
+  }
+}
