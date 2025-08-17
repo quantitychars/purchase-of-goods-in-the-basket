@@ -1,0 +1,82 @@
+[
+  {
+    "id": "p-001",
+    "title": "Retro T-Shirt",
+    "price": 499,
+    "image": "https://picsum.photos/400?random=1",
+    "sku": "TSH-RT-21",
+    "copy": "100 % бавовна, oversize"
+  },
+  {
+    "id": "p-002",
+    "title": "Classic Hoodie",
+    "price": 1099,
+    "image": "https://picsum.photos/400?random=2",
+    "sku": "HD-CL-09",
+    "copy": "Теплий фліс, 320 г/м²"
+  },
+  {
+    "id": "p-003",
+    "title": "Denim Jacket",
+    "price": 2199,
+    "image": "https://picsum.photos/400?random=3",
+    "sku": "DJ-1980",
+    "copy": "Натуральний денім, unisex"
+  },
+  {
+    "id": "p-004",
+    "title": "Canvas Backpack",
+    "price": 899,
+    "image": "https://picsum.photos/400?random=4",
+    "sku": "BP-CNV-07",
+    "copy": "14 L, водостійке дно"
+  },
+  {
+    "id": "p-005",
+    "title": "Running Sneakers",
+    "price": 2699,
+    "image": "https://picsum.photos/400?random=5",
+    "sku": "SN-RUN-42",
+    "copy": "Амортизація EVA, 300 г"
+  },
+  {
+    "id": "p-006",
+    "title": "Leather Belt",
+    "price": 549,
+    "image": "https://picsum.photos/400?random=6",
+    "sku": "BLT-LTH-32",
+    "copy": "Натуральна шкіра, 110 см"
+  },
+  {
+    "id": "p-007",
+    "title": "Wool Scarf",
+    "price": 449,
+    "image": "https://picsum.photos/400?random=7",
+    "sku": "SCF-WL-19",
+    "copy": "Меринос, 180×30 см"
+  },
+  {
+    "id": "p-008",
+    "title": "Beanie Hat",
+    "price": 299,
+    "image": "https://picsum.photos/400?random=8",
+    "sku": "BN-HAT-08",
+    "copy": "Акрил 100 %, універсальний розмір"
+  },
+  {
+    "id": "p-009",
+    "title": "Sport Shorts",
+    "price": 639,
+    "image": "https://picsum.photos/400?random=9",
+    "sku": "SH-SP-15",
+    "copy": "Поліестер + еластан, Dry-Fit"
+  },
+  {
+    "id": "p-010",
+    "title": "Thermo Bottle 0 .75 L",
+    "price": 799,
+    "image": "https://picsum.photos/400?random=10",
+    "sku": "BTL-TH-75",
+    "copy": "Тримає тепло 12 год"
+  }
+]
