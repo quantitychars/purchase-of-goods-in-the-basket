@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import { openModal } from "../store/modalSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchProducts } from "../store/productsSlice";
-import { selectCartItems, removeItem } from "../store/cartSlice";
+import { selectCartItems, clearCart } from "../store/cartSlice"; // <-- 1. Імпортуємо clearCart
+import { openModal } from "../store/modalSlice";
 import ProductList from "../components/ProductList/ProductList";
+import CheckoutForm from "../components/CheckoutForm/CheckoutForm"; // <-- 2. Імпортуємо нашу форму
 
 export default function CartPage() {
   const cartItems = useSelector(selectCartItems);
@@ -52,15 +53,33 @@ export default function CartPage() {
     );
   };
 
-  /* 4. UI */
+  /* 4. Створюємо функцію-обробник для форми */
+  const handleCheckout = () => {
+    // Диспатчимо дію очищення кошика
+    dispatch(clearCart());
+  };
 
-  return cartProducts.length ? (
-    <ProductList
-      items={cartProducts}
-      showRemove // прапор для ×-кнопки
-      onRemove={confirmRemove}
-    />
-  ) : (
-    <p className="text-center py-12 text-gray-500">Кошик порожній</p>
+  /* 5. Оновлюємо UI */
+  return (
+    <div className="container mx-auto p-4">
+      {cartProducts.length > 0 ? (
+        <>
+          {/* Спочатку відображаємо список товарів у кошику */}
+          <ProductList
+            items={cartProducts}
+            showRemove // прапор для ×-кнопки
+            onRemove={confirmRemove}
+          />
+
+          {/* Візуальний розділювач */}
+          <hr className="my-8 border-gray-300" />
+
+          {/* Потім відображаємо форму оформлення замовлення */}
+          <CheckoutForm onCheckout={handleCheckout} />
+        </>
+      ) : (
+        <p className="text-center py-12 text-gray-500">Кошик порожній</p>
+      )}
+    </div>
   );
 }

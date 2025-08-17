@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 // Функція для завантаження стану з localStorage
-// Ми винесли її, бо вона знадобиться в головному store
 export const loadState = () => {
   try {
     const serializedState = localStorage.getItem("cart");
@@ -23,21 +22,25 @@ const cartSlice = createSlice({
   },
 
   reducers: {
-    // Раніше це був case "ADD":
+    // Додає товар або збільшує його кількість
     addItem(state, action) {
       const { id } = action.payload;
       state.items[id] = (state.items[id] || 0) + 1;
     },
-    // Раніше це був case "REMOVE":
+    // Видаляє товар з кошика
     removeItem(state, action) {
       const { id } = action.payload;
       delete state.items[id];
+    },
+    // Повністю очищує кошик
+    clearCart(state) {
+      state.items = {};
     },
   },
 });
 
 // Експортуємо дії, які згенерував createSlice
-export const { addItem, removeItem } = cartSlice.actions;
+export const { addItem, removeItem, clearCart } = cartSlice.actions;
 
 // Експортуємо сам reducer
 export default cartSlice.reducer;

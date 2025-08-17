@@ -1,7 +1,7 @@
 let cache = null;
 
 export async function getProducts() {
-  if (cache) return cache; // вже завантажували → віддаємо
+  if (cache) return cache;
 
   const res = await fetch("/products.json");
   if (!res.ok) throw new Error("Failed to load products.json");
